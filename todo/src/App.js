@@ -10,9 +10,9 @@ function App() {
 
   const [state, dispatch] = useReducer(todoReducer, initialState);
 
-  const addTodo = dispatch({type: ADD_TODO, payload: todo });
-  const toggleTodo = dispatch({type: TOGGLE_TODO, payload: id});
-  const clearCompleted = dispatch({type: CLEAR_COMPLETED});
+  const addTodo = (todo) => dispatch({type: ADD_TODO, payload: todo });
+  const toggleTodo = (id) => dispatch({type: TOGGLE_TODO, payload: id});
+  const clearCompleted = () => dispatch({type: CLEAR_COMPLETED});
 
   return (
     <div>
