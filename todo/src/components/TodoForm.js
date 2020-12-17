@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const TodoForm = (props) => {
+const TodoForm = (props) => {
 
   const [newTodo, setNewTodo] = useState();
 
@@ -9,7 +9,7 @@ export const TodoForm = (props) => {
   };
 
   const submitForm = (e) => {
-    e.preventDefault(),
+    e.preventDefault();
     props.addTodo(newTodo);
     setNewTodo('');
   };
@@ -22,9 +22,10 @@ export const TodoForm = (props) => {
         value={newTodo}
         onChange={handleChanges}
       />
-      <button>+</button>
+      <button>Add</button>
       <button onClick={() => props.clearCompleted()}>Clear Completed</button>
     </form>
   );
+};
 
-}
+export default TodoForm;

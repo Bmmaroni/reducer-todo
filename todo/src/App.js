@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
 
 import TodoForm from './components/TodoForm';
@@ -21,6 +21,6 @@ function App() {
       <TodoForm addTodo={addTodo} clearCompleted={clearCompleted} />
     </div>
   );
-}
+};
 
 export default App;
